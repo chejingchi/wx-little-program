@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-container {
+  height: 900rpx;
+  display: flex;
+  background-image: url(https://letaoji.xyz/source-file/main-background.jpg);
+  background-repeat: round;
+  flex-direction: column;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 250rpx;
+}
+
+.userinfo-avatar {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: 10rpx;
+  color: #aaa;
+}
+.usermotto {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60rpx;
+}
+.index-btn {
+  background-image: url(https://letaoji.xyz/source-file/index-btn.jpg);
+  background-repeat: round;
+  width: 112rpx;
+  height: 123.3rpx;
+}
+.order-trainer {
+  justify-content: flex-start;
+  margin-left: 80rpx;
+}
+.my-order {
+  margin-left: 330rpx;
+}
+.text {
+  font-size: 28rpx;
+}

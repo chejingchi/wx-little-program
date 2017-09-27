@@ -1,0 +1,12 @@
+<view wx:for="{{yylist}}" wx:for-item="i">
+  <view>预约教练:{{i.jlmc}}</view>
+  <view>预约日期:{{i.yyrq}}</view>
+  <view>预约时间:{{i.yysjmc}}</view>
+  <view wx:if="{{i.isqx == '1'}}">
+    <button type="warn" bindtap="detmyyy" id="{{i.fid}}" class="smallbtn" style="width:100px">取消</button>
+  </view>
+  <view wx:if="{{i.isqx == '0'}}">
+    <button type="warn" class="smallbtn" style="width:100px;background:gray">取消</button>
+  </view>
+
+</view>

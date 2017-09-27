@@ -1,0 +1,30 @@
+<!--logs.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+      <view class="section__title" style="display:none">
+        <input name='hyxm' value='{{userInfo.nickName}}' />
+      </view>
+      <picker bindchange="pickerChangeForJl" name='jlfid' value="{{index}}" range="{{array}}">
+        <view class="picker">
+          预约教练:{{array[index]}}
+        </view>
+      </picker>
+
+      <view class="section">
+        <picker mode="date" value="{{date}}" id="yyrq" name='yyrq' start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+          <view class="picker">
+            预约日期: {{date}}
+          </view>
+        </picker>
+      </view>
+
+      <picker bindchange="pickerChangeForSj" name='yysj' value="{{index2}}" range="{{array2}}">
+        <view class="picker">
+          预约时间:{{array2[index2]}}
+        </view>
+      </picker>
+  </view>
+  <view class="btn-area">
+      <button type="primary"  class="usermotto" formType="submit">提交预约</button>
+    </view>
+</form>

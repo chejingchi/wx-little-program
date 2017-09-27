@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo-container">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="usermotto">
+    <view class='order-trainer' bindtap="gotoYyPage">
+      <view class="index-btn">
+      </view>
+      <view class='text'> 预约教练 </view>
+    </view>
+    <view class="my-order" bindtap="gotoMyyyPage">
+      <view class="index-btn">
+      </view>
+      <view class='text'> 我的预约 </view>
+    </view>
+
+  </view>
+</view>
