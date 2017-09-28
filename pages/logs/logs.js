@@ -9,13 +9,13 @@ Page({
     userInfo: {},
     array: [],
     objectArray: [],
-    index: -1,
+    index: 0,
     date:'',
     startDate:'',
     endDate:'',
     array2: '',
     objectArray2: '',
-    index2: -1
+    index2: 0
   },
   //选择教练
   pickerChangeForJl: function (e) {
@@ -60,8 +60,8 @@ Page({
               dataShow[i] = res.data.data[i].yysj;
             }
             
-            that.setData({ array2: dataShow });
-            that.setData({ objectArray2: dataValue });
+            that.setData({ array2: ['--请选择--'].concat(dataShow) });
+            that.setData({ objectArray2: [{ id: -1, name: '--请选择--' }].concat(dataValue)});
           }
         }
 
@@ -79,6 +79,14 @@ Page({
     if (e.detail.value.yysj==-1){
       wx.showToast({
         title: '请选择预约时间',
+        icon: 'loading',
+        duration: 1000
+      })
+      return;
+    }
+    if (e.detail.value.jlfid == 0) {
+      wx.showToast({
+        title: '请选择教练',
         icon: 'loading',
         duration: 1000
       })
@@ -161,8 +169,8 @@ Page({
 
           dataShow[i] = res.data.data[i].jlmc;
         }
-        that.setData({ array: dataShow });
-        that.setData({ objectArray: dataValue });
+        that.setData({ array: ['--请选择--'].concat(dataShow) });
+        that.setData({ objectArray: [{ id: 0, name: '--请选择--' }].concat(dataValue) });
         }
       }
       
