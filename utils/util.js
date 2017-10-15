@@ -1,6 +1,6 @@
 
-var baseUrl = 'https://letaoji.xyz/lrb-admin';
-// var baseUrl = 'http://localhost:8899/lrb-admin';
+// var baseUrl = 'https://letaoji.xyz/lrb-admin';
+var baseUrl = 'http://localhost:8899/lrb-admin';
 
 function formatTime(date) {
   var year = date.getFullYear()
